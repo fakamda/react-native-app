@@ -53,5 +53,27 @@ export default [
       ratingAverage: 0,
       reviewCount: 0,
       ownerAvatarUrl: 'https://avatars3.githubusercontent.com/u/13142323?v=4'
-    }
+    },
+    {
+        id: 'facebook.react',
+        fullName: 'facebook/react',
+        description: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.',
+        language: 'JavaScript',
+        forksCount: 19374,
+        stargazersCount: 161541,
+        ratingAverage: 80,
+        reviewCount: 10,
+        ownerAvatarUrl: 'https://avatars0.githubusercontent.com/u/69631?v=4'
+      },
+      {
+        id: 'tensorflow.tensorflow',
+        fullName: 'tensorflow/tensorflow',
+        description: 'An open-source machine learning framework developed by Google.',
+        language: 'Python',
+        forksCount: 152196,
+        stargazersCount: 157829,
+        ratingAverage: 95,
+        reviewCount: 15,
+        ownerAvatarUrl: 'https://avatars0.githubusercontent.com/u/15658638?v=4'
+      }
   ]
