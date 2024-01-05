@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         marginTop: 4,
         marginVertical: 4,
+        borderRadius: 4,
         overflow: 'hidden'
     },
     image: {
