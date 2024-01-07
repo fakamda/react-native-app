@@ -2,6 +2,7 @@ import React from 'react'
 import { Formik, useField } from 'formik'
 import { View, Button, StyleSheet } from 'react-native'
 import StyledTextInput from '../components/StyledTextInput'
+import StyledText from '../components/StyledText'
 
 const initalValues = {
     email: '',
@@ -9,6 +10,12 @@ const initalValues = {
 }
 
 const styles = StyleSheet.create({
+    error: {
+        color: 'red',
+        fontSize: 12,
+        marginBottom: 20,
+        marginTop: -5
+    },
     form: {
         margin: 12
     }
@@ -17,7 +24,10 @@ const styles = StyleSheet.create({
 const FormikInputValue = ({name, ...props}) => {
     const [field, meta, helpers] = useField(name)
     return (
-        <StyledTextInput value={field.value} onChangeText={value => helpers.setValue(value)} {...props} /> 
+        <>
+            <StyledTextInput error={meta.error} value={field.value} onChangeText={value => helpers.setValue(value)} {...props} />
+            {meta.error && <StyledText style={styles.error}>{meta.error}</StyledText>}
+        </>
     )
 }
 
@@ -30,6 +40,7 @@ const validate = (values) => {
     } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i.test(values.email)) {
         errors.email = 'Invalid email adress'
     }
+    return errors
 } 
 
 export default function LogInPage () {
