@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     }
 })
 
-const LoginPage = () => {
+export default function LogInPage () {
   return (
     <Formik initialValues={initalValues} onSubmit={values => console.log(values)}>
         {({ handleChange, handleSubmit, values })=> {
@@ -27,5 +27,3 @@ const LoginPage = () => {
     </Formik>
   )
 }
-
-export default LoginPage
