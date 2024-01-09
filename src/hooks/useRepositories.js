@@ -5,7 +5,7 @@ const useRepositories = () => {
   
     const fetchRepositories = async () => {
       try {
-        const response = await globalThis.fetch('http://localhost:5000/api/repositories') //globalThis.fetch para pasarle el objeto global
+        const response = await globalThis.fetch('http://192.168.56.1:5000/api/repositories') //globalThis.fetch para pasarle el objeto global
     
         const json = await response.json()
         console.log('Response JSON:', json);
